@@ -3,7 +3,6 @@
 """ Model BaseModel Parent of all classes"""
 from datetime import datetime
 import uuid
-import models
 
 
 class BaseModel:
@@ -41,7 +40,8 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             # If It's new instance add to the models
-            models.storage.new(self)
+            from models.__init__ import storage
+            storage.new(self)
 
     def __str__(self):
         """returns ifo about model in string format"""
@@ -56,7 +56,8 @@ class BaseModel:
         updated_at with the current datetime"""
 
         self.updated_at = datetime.now()
-        models.storage.sasve()
+        from models.__init__ import storage
+        storage.save()
 
     def to_dict(self):
         """
