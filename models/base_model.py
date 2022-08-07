@@ -19,14 +19,14 @@ class BaseModel:
         """Intialize the attributes:
         random uuid, date create or  update"""
         if kwargs:
-            for key, value in kwargs.item():
+            for key, value in kwargs.items():
                 if "created_at" == key:
                     self.created_at = datetime.strptime(
                             kwargs["created_at"],
                             "%Y-%m-%dT%H:%M:%S.%f")
                 elif "updated_at" == key:
                     self.updated_at = datetime.strptime(
-                            kwargs["update_at"],
+                            kwargs["updated_at"],
                             "%Y-%m-%dT%H:%M:%S.%f")
                 elif "__class__" == key:
                     # for the we are not doing anything with class
@@ -45,7 +45,8 @@ class BaseModel:
 
     def __str__(self):
         """returns ifo about model in string format"""
-        return ('[{}] ({}) {}'.format(self.__class__.__name__, self.id, self.__dict__))
+        return ('[{}] ({}) {}'.format(self.__class__.__name__,
+                self.id, self.__dict__))
 
     def __repr__(self):
         """returns string represantation"""
@@ -61,13 +62,15 @@ class BaseModel:
 
     def to_dict(self):
         """
-        returns a dictionary containing all keys/values of __dict__ of the instance:
+        returns a dictionary containing all keys/values
+        of __dict__ of the instance:
         """
 
         # define dictionary that adds class name as element
         dic = {}
         dic["__class__"] = type(self).__name__
-        # loop over the dict items, and convert create_at and update_at to ISO format
+        # loop over the dict items, and
+        # convert create_at and update_at to ISO format
         for key, val in self.__dict__.items():
             if isinstance(val, (datetime, )):
                 dic[key] = val.isoformat()
