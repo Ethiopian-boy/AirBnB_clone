@@ -1,48 +1,16 @@
 #!/usr/bin/python3
-
+""" testing Amenity """
 import unittest
-import os
+import pep8
 from models.amenity import Amenity
-from models.base_model import BaseModel
 
+class Amenity_testing(unittest.TestCase):
+    """ check BaseModel """
 
-class TestAmenity(unittest.TestCase):
-
-    @classmethod
-    def setUp(cls):
-        cls.amenity1 = Amenity()
-        cls.amenity1.name = "Zone"
-
-    @classmethod
-    def tearDown(cls):
-        del cls.amenity1
-        try:
-            os.remove("file.json")
-        except FileNotFoundError:
-            pass
-
-    def test_is_subclass(self):
-        self.assertTrue(issubclass(self.amenity1.__class__, BaseModel), True)
-
-    def test_has_attributes(self):
-        self.assertTrue('id' in self.amenity1.__dict__)
-        self.assertTrue('name' in self.amenity1.__dict__)
-        self.assertTrue('created_at' in self.amenity1.__dict__)
-        self.assertTrue('updated_at' in self.amenity1.__dict__)
-
-    def test_checking_for_functions(self):
-        self.assertIsNotNone(Amenity.__doc__)
-
-    def test_attributes_are_str(self):
-        self.assertEqual(type(self.amenity1.name), str)
-
-    def test_save(self):
-        self.amenity1.save()
-        self.assertNotEqual(self.amenity1.created_at, self.amenity1.updated_at)
-
-    def test_to_dict(self):
-        self.assertEqual('to_dict' in dir(self.amenity1), True)
-
-
-if __name__ == "__main__":
-    unittest.main()
+    def testpep8(self):
+        """ testing codestyle """
+        pepstylecode = pep8.StyleGuide(quiet=True)
+        path_user = 'models/amenity.py'
+        result = pepstylecode.check_files([path_user])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
