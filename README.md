@@ -39,9 +39,9 @@ cd AirBnB_clone
 
 ## Usage of command interpreter
 
-```
-Interactive Mode:
+# Interactive Mode:
 1. Run program and show prompt with help command.
+```
 PROMPT~>AirBnB_clone# ./console.py
 (hbnb) help
 
@@ -58,7 +58,7 @@ Quit command to exit the program
 (hbnb) quit
 PROMPT~>
 ```
-Usage Create:
+# Usage Create:
  
 With the create command, a new instance is created
 
@@ -68,7 +68,7 @@ With the create command, a new instance is created
 (hbnb)
 
 ```
-Usage All:
+# Usage All:
 
 With the all command, all instances are displayed, returning a serialized json (string).
 
@@ -78,7 +78,7 @@ With the all command, all instances are displayed, returning a serialized json (
 (hbnb)
 
 ```
-Usage Show:
+# Usage Show:
 
 With the show command, the instance is displayed, returning a dictionary of the id instance.
 
@@ -88,7 +88,7 @@ With the show command, the instance is displayed, returning a dictionary of the 
 (hbnb)
 
 ```
-Usage Update:
+# Usage Update:
 
 With the update command, the attributes of the instances are updated.
 ```
@@ -98,7 +98,7 @@ With the update command, the attributes of the instances are updated.
 (hbnb)
 ```
 
-Usage Count:
+# Usage Count:
 
 With the count command, count the number of instances.
 
@@ -108,7 +108,7 @@ With the count command, count the number of instances.
 (hbnb)
 
 ```
-Usage Destroy:
+# Usage Destroy:
 
 With the Destroy command, instances are destroyed.
 ```
@@ -119,7 +119,7 @@ With the Destroy command, instances are destroyed.
 ```
 
 
-non-interactive mode:
+# non-interactive mode:
 
 ```
 PROMPT~>AirBnB_clone# echo "help" | ./console.py
@@ -130,5 +130,6 @@ EOF  all  count  create  destroy  help  quit  show  update
 
 (hbnb)
 ```
-Mulubrhan Brhane
+Mulubrhan Brhane 
+
 Mfon Etuk
