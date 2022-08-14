@@ -1,3 +1,0 @@
-[submodule "web_static/W3C-Validator"]
-	path = web_static/W3C-Validator
-	url = https://github.com/holbertonschool/W3C-Validator
