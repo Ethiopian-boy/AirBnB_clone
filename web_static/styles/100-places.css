@@ -92,8 +92,8 @@ div.amenities ul li {
 	background-repeat: no-repeat;
 	background-position: center left;
 	background-size: cover;
-	width: 25%;
-	height: 25%;
+	width: 25px;
+	height: 25px;
 }
 div.reviews ul li h3 {
 	font-size: 14px;
