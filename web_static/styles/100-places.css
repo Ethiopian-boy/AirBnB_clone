@@ -79,7 +79,7 @@ div.reviews h2 {
 div.amenities ul,
 div.reviews ul {
 	padding: 0px;
-	display: inline-block;
+	display: block;
 }
 div.amenities ul li,
 div.reviews ul li {
