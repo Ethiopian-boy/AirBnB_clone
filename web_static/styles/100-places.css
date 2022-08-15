@@ -63,51 +63,51 @@ div.description {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-/*  Full details */
-div.amenities,
-div.reviews {
+/*  Fulll details */
+article div.amenities,
+article div.reviews {
 	margin-top: 40px;
 	width: 100%;
 }
-div.amenities h2,
-div.reviews h2 {
+article div.amenities h2,
+article div.reviews h2 {
 	font-size: 16px;
 	border-bottom: 1px solid #DDDDDD;
 	padding-left: 0px;
 	padding-bottom: 10px;
 }
-div.amenities ul,
-div.reviews ul {
+article div.amenities ul,
+article div.reviews ul {
 	padding: 0px;
 	display: block;
 }
-div.amenities ul li,
-div.reviews ul li {
+article div.amenities ul li,
+article div.reviews ul li {
 	list-style: none;
 }
-div.amenities ul {
+article div.amenities ul {
 	margin-bottom: 0px;
 }
-div.amenities ul li {
+article div.amenities ul li {
 	background-repeat: no-repeat;
 	background-position: center left;
 	background-size: cover;
 	width: 25px;
 	height: 25px;
 }
-div.reviews ul li h3 {
+article div.reviews ul li h3 {
 	font-size: 14px;
 }
-div.reviews ul li p,
-div.amenities ul li p {
+article div.reviews ul li p,
+article div.amenities ul li p {
 	font-size: 12px;
 }
-.tv {
+article div.amenities ul li.tv {
 	background-image: url(../images/icon_tv.png);
 }
-div.amenities ul li.wifi {
+article div.amenities ul li.wifi {
 	background-image: url(../images/icon_wifi.png);
 }
-div.amenities ul li.pet {
+article div.amenities ul li.pet {
 	background-image: url(../images/icon_pets.png);
 }
