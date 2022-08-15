@@ -79,7 +79,7 @@ div.reviews h2 {
 div.amenities ul,
 div.reviews ul {
 	padding: 0px;
-	display: block;
+	display: inline-block;
 }
 div.amenities ul li,
 div.reviews ul li {
@@ -102,7 +102,7 @@ div.reviews ul li p,
 div.amenities ul li p {
 	font-size: 12px;
 }
-div.amenities ul li.tv {
+.tv {
 	background-image: url(../images/icon_tv.png);
 }
 div.amenities ul li.wifi {
